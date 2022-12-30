@@ -1,0 +1,31 @@
+.custom-bar-chart-legend {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    font-weight: 500;
+    font-size: 18px;
+    list-style: none;
+    align-items: center;
+    color: rgba(116, 121, 140, 1)
+}
+
+.custom-legend-puce {
+    width: 8px;
+    height: 8px;
+    border-radius: 5px;
+    margin: 0 10px 0 30px;
+}
+
+.bar-chart-tooltip {
+    background-color: #e60000;
+    color: white;
+    text-align: center;
+    
+}
+
+.bar-chart-tooltip p {
+    padding: 15px 8px;
+    font-weight: 500;
+    font-size: 14px;
+}

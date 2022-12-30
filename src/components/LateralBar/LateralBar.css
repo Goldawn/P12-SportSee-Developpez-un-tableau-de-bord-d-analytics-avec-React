@@ -1,0 +1,42 @@
+#lateral-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100vh;
+    width: var(--aside-width);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#lateral-bar ul {
+    position: absolute;
+    padding: 0;
+    top: 27%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#lateral-bar li {
+    background: white;
+    width: 64px;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    display: flex;
+}
+
+#lateral-bar li img {
+    margin: auto;
+    width: 32px;
+    aspect-ratio: 1;
+}
+
+#lateral-bar p {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    margin-bottom: 60px;
+}

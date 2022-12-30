@@ -1,0 +1,19 @@
+.line-chart-layer {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.line-chart-tooltip {
+    background-color: white !important;
+}
+
+.line-chart-tooltip p {
+    padding: 10px 12px;
+    font-weight: 500;
+}
+
+.line-chart .recharts-responsive-container {
+    transform: translateY(50%);
+}

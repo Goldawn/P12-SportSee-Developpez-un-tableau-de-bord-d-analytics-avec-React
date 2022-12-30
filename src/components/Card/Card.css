@@ -1,0 +1,48 @@
+.nutrition-card {
+    /* min-width: 260px; */
+    flex: 1;
+    background: #FBFBFB;
+    border-radius: 5px;
+    padding: 32px;
+    /* box-sizing: border-box; */
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nutrition-card-img {
+    min-width: 60px;
+    aspect-ratio: 1;
+    background-color: blue;
+    border-radius: 5px;
+    display: flex;
+}
+
+.nutrition-card-img img {
+    margin: auto;
+}
+
+.nutrition-card-details p{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.nutrition-card-details p:last-child{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(116, 121, 140, 1)
+}
+
+.bg-red {
+    background-color: #ff000012;
+}
+.bg-blue {
+    background-color: #4AB8FF1A;
+}
+.bg-yellow {
+    background-color: #f9cf241a;
+}
+.bg-pink {
+    background-color: #FD51811A;
+}

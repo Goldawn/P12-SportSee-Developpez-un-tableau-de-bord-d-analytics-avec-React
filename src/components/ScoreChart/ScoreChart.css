@@ -1,0 +1,23 @@
+.recharts-legend-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-radial-legend p.bold {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: black;
+}
+
+.custom-radial-legend {
+    color: blue;
+}
+
+.custom-radial-legend p {
+    margin: 8px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(116, 121, 140, 1);
+}

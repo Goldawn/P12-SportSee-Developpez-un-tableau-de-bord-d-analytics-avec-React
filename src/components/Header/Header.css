@@ -1,0 +1,28 @@
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    background-color: black;
+    color: white;
+    height: var(--header-height);
+}
+
+#site-logo {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    margin-left: 30px;
+    gap: 10px;
+}
+
+#site-logo img {
+    width: 58px;
+    aspect-ratio: 1;
+}
+
+h1 {
+    color: #FF0101;
+    font-size: 24px;
+    font-weight: 400;
+}
