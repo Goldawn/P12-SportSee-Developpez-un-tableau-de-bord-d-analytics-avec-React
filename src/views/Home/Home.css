@@ -6,7 +6,6 @@ main {
 
 #content {
     width: calc(100% - 120px - 200px);
-    max-width: 1200px;
     margin-left: var(--aside-width);
     margin-top: var(--header-height);
     padding: 50px 100px;
@@ -14,7 +13,6 @@ main {
 
 #content section {
     width: 100%;
-    /* max-width: 1200px; */
 }
 
 section.greet p:first-child {
