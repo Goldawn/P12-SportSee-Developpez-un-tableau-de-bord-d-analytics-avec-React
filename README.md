@@ -43,5 +43,5 @@ Naviguez ensuite vers l'utilisateur souhaité en ajoutant `/user/:userId`.
 Les utlisateurs disponibles sont le `12` et le `18`.
 Ajoutez ensuite la query url `?isfetched` si vous désirez faire appel à l'API au lieu des données mockées.
 
-Exemple d'URL valide : `http://localhost:3001/user/12`
-Exemple d'url valide : `http://localhost:3001/user/18?isfetched`
+- Exemple d'URL valide : `http://localhost:3001/user/12`
+- Exemple d'url valide : `http://localhost:3001/user/18?isfetched`
