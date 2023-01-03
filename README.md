@@ -26,7 +26,7 @@ yarn start
 
 1. Cloner le dépôt Github
 ```bash
-git clone https://github.com/Goldawn/Projet-7---Groupomania.git
+git clone https://github.com/Goldawn/P12-SportSee-Developpez-un-tableau-de-bord-d-analytics-avec-React
 ```
 2. Mise en place de l'environnement 
 ```bash
