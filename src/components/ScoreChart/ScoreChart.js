@@ -17,7 +17,6 @@ const style = {
 };
 
 /**
- * 
  * @param {object[]} payload all of the data that is used to display the graph
  * @returns {HTMLCollection}
  */
@@ -41,7 +40,7 @@ const CustomizedLegend = ({ payload }) => {
  * @param {number} score the user's score used in the radialBarChart, contains a value between 0 and 1.
  */
 const ScoreChart = ({score}) => {
-  
+
   const data = [
     {
       name: '',

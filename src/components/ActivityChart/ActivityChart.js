@@ -9,11 +9,9 @@ import mockedData from '../../data/activity.json'
  * 
  * @param {boolean} active state of the tooltip visibility
  * @param {object[]} payload all of the data that is used to display the graph
- * @returns {HTMLCollection}
  */
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
-    // console.log(payload)
     return (
       <div className="bar-chart-tooltip">
         <p className="label">{`${payload[0].value} kg`}</p>
