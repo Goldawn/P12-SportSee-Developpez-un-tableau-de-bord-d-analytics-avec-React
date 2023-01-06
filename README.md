@@ -37,7 +37,7 @@ Par défaut le port de lancement est 3000, tapez donc `y` dans le terminal lors 
 
 3. Tester l'application 
 
-L'application est accessible à l'adresse : `localhost:3000`
+L'application est accessible à l'adresse : `localhost:3001`
 
 Naviguez ensuite vers l'utilisateur souhaité en ajoutant `/user/:userId`.
 Les utlisateurs disponibles sont le `12` et le `18`.
