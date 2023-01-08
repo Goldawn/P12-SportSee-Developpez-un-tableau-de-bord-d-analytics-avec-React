@@ -48,4 +48,3 @@ Ajoutez ensuite la query url `?isfetched` si vous désirez faire appel à l'API 
 - Exemple d'url valide : `http://localhost:3001/user/18?isfetched`
 =======
 - Exemple d'url valide : `http://localhost:3001/user/18?isfetched`
->>>>>>> 199150a8ee963269c96fc0fdcacb54afce6903b7
