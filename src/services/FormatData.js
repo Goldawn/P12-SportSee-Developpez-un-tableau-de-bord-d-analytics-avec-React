@@ -24,7 +24,6 @@ const formatData = (rawData, type) => {
             break;
         case 'performance':
             if(rawData && rawData.data.data && rawData.data.data.length) {
-                console.log(rawData)
                 let formattedData = []
                 rawData.data.data.forEach(element => {
                   let dataElement = {}

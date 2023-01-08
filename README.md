@@ -37,11 +37,15 @@ Par défaut le port de lancement est 3000, tapez donc `y` dans le terminal lors 
 
 3. Tester l'application 
 
-L'application est accessible à l'adresse : `localhost:3000`
+L'application est accessible à l'adresse : `localhost:3001`
 
 Naviguez ensuite vers l'utilisateur souhaité en ajoutant `/user/:userId`.
 Les utlisateurs disponibles sont le `12` et le `18`.
 Ajoutez ensuite la query url `?isfetched` si vous désirez faire appel à l'API au lieu des données mockées.
 
 - Exemple d'URL valide : `http://localhost:3001/user/12`
+<<<<<<< HEAD
 - Exemple d'url valide : `http://localhost:3001/user/18?isfetched`
+=======
+- Exemple d'url valide : `http://localhost:3001/user/18?isfetched`
+>>>>>>> 199150a8ee963269c96fc0fdcacb54afce6903b7
