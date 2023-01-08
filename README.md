@@ -44,7 +44,5 @@ Les utlisateurs disponibles sont le `12` et le `18`.
 Ajoutez ensuite la query url `?isfetched` si vous désirez faire appel à l'API au lieu des données mockées.
 
 - Exemple d'URL valide : `http://localhost:3001/user/12`
-<<<<<<< HEAD
 - Exemple d'url valide : `http://localhost:3001/user/18?isfetched`
-=======
 - Exemple d'url valide : `http://localhost:3001/user/18?isfetched`
