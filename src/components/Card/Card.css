@@ -1,17 +1,15 @@
 .nutrition-card {
-    /* min-width: 260px; */
     flex: 1;
     background: #FBFBFB;
     border-radius: 5px;
-    padding: 32px;
-    /* box-sizing: border-box; */
+    padding: 25px;
     display: flex;
     align-items: center;
     gap: 24px;
 }
 
 .nutrition-card-img {
-    min-width: 60px;
+    min-width: 40px;
     aspect-ratio: 1;
     background-color: blue;
     border-radius: 5px;
@@ -22,14 +20,14 @@
     margin: auto;
 }
 
-.nutrition-card-details p{
-    font-size: 20px;
+.nutrition-card-details p {
+    font-size: 16px;
     font-weight: 700;
     margin: 0;
 }
 
-.nutrition-card-details p:last-child{
-    font-size: 14px;
+.nutrition-card-details p:last-child {
+    font-size: 13px;
     font-weight: 500;
     color: rgba(116, 121, 140, 1)
 }
@@ -45,4 +43,19 @@
 }
 .bg-pink {
     background-color: #FD51811A;
+}
+
+@media (min-width: 1400px) {
+    .nutrition-card-details p {
+        font-size: 20px;
+    }
+    .nutrition-card-details p:last-child {
+        font-size: 14px;
+    }
+    .nutrition-card-img {
+        min-width: 60px;
+    }
+    .nutrition-card {
+        padding: 32px;
+    }
 }

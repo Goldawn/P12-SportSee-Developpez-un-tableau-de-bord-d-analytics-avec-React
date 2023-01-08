@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {useParams} from "react-router-dom";
 import Header from '../../components/Header/Header'
 import Card from '../../components/Card/Card'
@@ -11,6 +11,7 @@ import flame from '../../assets/icons/flame.svg';
 import chicken from '../../assets/icons/chicken.svg';
 import apple from '../../assets/icons/apple.svg';
 import hamburger from '../../assets/icons/hamburger.svg';
+import fetchData from '../../services/FetchData';
 import './Home.css'
 
 
@@ -19,25 +20,7 @@ const Home = () => {
     const params = useParams()
     const userId = params.id ? params.id : "12"
 
-
-
-    const [ userData, setUserData ] = useState([]);
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [error, setError] = useState(null);
-    
-    useEffect(() => {
-        fetch(`http://localhost:3000/user/${userId}`)
-          .then(res => res.json())
-          .then(result => {
-            setIsLoaded(true);
-            setUserData(result)
-          },
-            (error) => {
-              setIsLoaded(true);
-              setError(error);
-            }
-          )
-    }, [])
+    const userData = fetchData(`http://localhost:3000/user/${userId}`, "user")
 
     /**
      * displays a layer with a lower opacity when hovering the session graph box.
@@ -46,11 +29,11 @@ const Home = () => {
      * @param {object} event contains the event data used to get the cursor position.
      */
     const translateXLayer = (event) => {
-        const test = document.querySelector(".line-chart-layer");
-        test.style.transform = `translateX(${event.pageX-220}px)`
+        const lineChartLayer = document.querySelector(".line-chart-layer");
+        lineChartLayer.style.transform = `translateX(${event.pageX-220}px)`
         const offsetWidth = document.querySelector(".line-chart").offsetWidth;
         const layerWidth = (offsetWidth-(event.pageX-220))
-        test.style.width = `${layerWidth}px`
+        lineChartLayer.style.width = `${layerWidth}px`
     }
 
     /**
@@ -61,11 +44,7 @@ const Home = () => {
         test.style.width = `0px`
     }
 
-    if (error) {
-        return <div>Error: {error.message}</div>;
-      } else if (!isLoaded) {
-        return <div>Loading...</div>;
-      } else {
+   
 
         return (
             <>
@@ -74,7 +53,7 @@ const Home = () => {
                     <LateralBar/>
                     <div id="content">
                         <section className="greet">
-                            <p>Bonjour <span>{userData.data.userInfos.firstName}</span></p>
+                            <p>Bonjour <span>{userData?.data?.userInfos?.firstName}</span></p>
                             <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
                         </section>
                         <section className="stats">
@@ -94,23 +73,23 @@ const Home = () => {
                                     </div>
                                     <div className="card-graph radial-chart">
                                         <h3 className="subtitle">Score</h3>
-                                        <ScoreChart score={userData.data.score ? userData.data.score : userData.data.todayScore }/>
+                                        <ScoreChart score={userData?.data?.score ? userData?.data?.score : userData?.data?.todayScore }/>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="nutrition-container">
-                                <Card img={flame} class={"bg-red"} data={{value:(userData.data.keyData.calorieCount/1000).toFixed(3), unit:'kCal', content:'Calories'}}/>
-                                <Card img={chicken} class={"bg-blue"} data={{value:userData.data.keyData.carbohydrateCount, unit:'g', content:'Proteines'}}/>
-                                <Card img={apple} class={"bg-yellow"} data={{value:userData.data.keyData.lipidCount, unit:'g', content:'Glucides'}}/>
-                                <Card img={hamburger} class={"bg-pink"} data={{value:userData.data.keyData.proteinCount, unit:'g', content:'Lipides'}}/>
+                                <Card img={flame} class={"bg-red"} data={{value:(userData?.data?.keyData?.calorieCount/1000).toFixed(3), unit:'kCal', content:'Calories'}}/>
+                                <Card img={chicken} class={"bg-blue"} data={{value:userData?.data?.keyData?.carbohydrateCount, unit:'g', content:'Proteines'}}/>
+                                <Card img={apple} class={"bg-yellow"} data={{value:userData?.data?.keyData?.lipidCount, unit:'g', content:'Glucides'}}/>
+                                <Card img={hamburger} class={"bg-pink"} data={{value:userData?.data?.keyData?.proteinCount, unit:'g', content:'Lipides'}}/>
                             </div>
                         </section>
                     </div>
                 </main>
             </>
         );
-};
+
 }
 
 export default Home;

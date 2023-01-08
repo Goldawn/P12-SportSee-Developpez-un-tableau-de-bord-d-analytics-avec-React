@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useLocation } from "react-router-dom";
+import React from 'react';
+import { useParams } from "react-router-dom";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './ActivityChart.css'
-import mockedData from '../../data/activity.json'
+import fetchData from '../../services/FetchData';
+import formatData from '../../services/FormatData';
 
 /**
  * Format the tooltip that is shown on hover of the barChart
@@ -22,28 +23,13 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-const ActivityChart = (props) => {
-
-    const [ data, setData ] = useState([]);
-
+const ActivityChart = () => {
+    
+    const type = "activity"
     const params = useParams()
-    const location = useLocation()
-     
-    useEffect(() => {
-        if (location.search === "?isfetched") {
-            const callApi = async () => {
-                const data = await (
-                    await fetch(`http://localhost:3000/user/${params.id}/activity`)
-                ).json();
-               setData(data.data.sessions);
-            };
-            callApi();
-        }
-        else {
-            setData(mockedData.find(mockedData => mockedData.data.userId === Number(params.id)).data.sessions)
-        }
-    },[])
-
+    const fetchedData = fetchData(`http://localhost:3000/user/${params.id}/activity`, type)
+    const data = formatData(fetchedData, type)
+    
     /**
      * Permet de numéroter les valeurs de l'axe des abscisses à partir de 1
      * 
@@ -56,8 +42,6 @@ const ActivityChart = (props) => {
 	  }
 
     /**
-     * 
-     * 
      * @param {object} props contains all the data of the legend, including the payload object
      * @returns {HTMLCollection}
      */
@@ -82,7 +66,7 @@ const ActivityChart = (props) => {
           </ul>
         );
       }
-  
+      
     return (
         <ResponsiveContainer width="100%" height="100%" wrapperStyle={{ background: "#f4f4f4" }}>
             <BarChart data={data} margin={{top: 5, right: 30, left: 20, bottom: 5}}>

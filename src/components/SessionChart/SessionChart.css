@@ -17,3 +17,14 @@
 .line-chart .recharts-responsive-container {
     transform: translateY(50%);
 }
+
+.recharts-cartesian-axis-tick-value, .recharts-polar-angle-axis-tick-value {
+    font-size: 12px;
+}
+
+
+@media (min-width: 1400px) {
+    .recharts-cartesian-axis-tick-value, .recharts-polar-angle-axis-tick-value {
+        font-size: 15px;
+    }
+}

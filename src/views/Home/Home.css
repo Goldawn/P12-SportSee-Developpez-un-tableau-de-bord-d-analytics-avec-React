@@ -5,10 +5,10 @@ main {
 }
 
 #content {
-    width: calc(100% - 120px - 200px);
+    width: calc(100% - var(--aside-width) - 60px);
     margin-left: var(--aside-width);
     margin-top: var(--header-height);
-    padding: 50px 100px;
+    padding: 40px 30px;
 }
 
 #content section {
@@ -16,7 +16,7 @@ main {
 }
 
 section.greet p:first-child {
-    font-size: 48px;
+    font-size: 36px;
     margin: 0;
     font-weight: 500;
 }
@@ -26,15 +26,15 @@ section.greet p span {
 }
 
 section.greet p:last-child {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 30px 0 0 0;
     font-weight: 500;
 }
 
 section.stats {
-    margin-top: 60px;
+    margin-top: 40px;
     display: flex;
-    gap: 60px;
+    gap: 30px;
 }
 
 section.stats .activity {
@@ -45,7 +45,7 @@ section.stats .nutrition-container {
     width: 25%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     justify-content: space-between;
 }
 
@@ -59,18 +59,18 @@ section.stats .nutrition-container {
 h3.subtitle {
     position: absolute;
     font-weight: 500;
-    font-size: 20px;
-    padding: 0 30px;
+    font-size: 16px;
+    padding: 0 10px;
 }
 
 .activity-card-container {
     margin-top: 30px;
     display: flex;
-    gap: 30px;
+    gap: 15px;
 }
 
 .card-graph {
-    width: calc(33.3% - 20px);
+    width: calc(33.3% - 10px);
     aspect-ratio: 1;
     border-radius: 5px;
     position: relative;
@@ -78,7 +78,6 @@ h3.subtitle {
 
 .line-chart {
     background-color: rgb(255, 0, 0);
-    /* height: 100%; */
 }
 
 .radar-chart {
@@ -93,3 +92,37 @@ h3.subtitle {
 .line-chart > h3 {
     color: rgba(255, 255, 255, .5);
 }
+
+@media (min-width: 1400px) {
+    section.greet p:first-child {
+        font-size: 48px;
+    }
+    section.greet p:last-child {
+        font-size: 18px;
+        margin-top: 30px 0 0 0;
+    }
+    #content {
+        width: calc(100% - 120px - 200px);
+        margin-left: var(--aside-width);
+        margin-top: var(--header-height);
+        padding: 50px 100px;
+    }
+    section.stats {
+        margin-top: 60px;
+        gap: 60px;
+    }
+    section.stats .nutrition-container {
+        width: 25%;
+        gap: 40px;
+    }
+    h3.subtitle {
+        font-size: 20px;
+        padding: 0 30px;
+    }
+    .activity-card-container {
+        gap: 30px;
+    }
+    .card-graph {
+        width: calc(33.3% - 20px);
+    }
+  }

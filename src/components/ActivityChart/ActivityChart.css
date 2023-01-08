@@ -4,17 +4,17 @@
     right: 0;
     display: flex;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
     list-style: none;
     align-items: center;
     color: rgba(116, 121, 140, 1)
 }
 
 .custom-legend-puce {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
     border-radius: 5px;
-    margin: 0 10px 0 30px;
+    margin: 0 5px 0 20px;
 }
 
 .bar-chart-tooltip {
@@ -27,5 +27,21 @@
 .bar-chart-tooltip p {
     padding: 15px 8px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+@media (min-width: 1400px) {
+    .custom-bar-chart-legend {
+        font-size: 18px;
+    }
+    .custom-legend-puce {
+        width: 8px;
+        height: 8px;
+        margin: 0 10px 0 30px;
+    }
+    .bar-chart-tooltip p {
+        padding: 15px 8px;
+        font-weight: 500;
+        font-size: 14px;
+    }
 }

@@ -17,12 +17,21 @@ header {
 }
 
 #site-logo img {
-    width: 58px;
+    width: 35px;
     aspect-ratio: 1;
 }
 
 h1 {
     color: #FF0101;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
 }
+
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 24px;
+    }
+    #site-logo img {
+        width: 48px;
+    }
+  }

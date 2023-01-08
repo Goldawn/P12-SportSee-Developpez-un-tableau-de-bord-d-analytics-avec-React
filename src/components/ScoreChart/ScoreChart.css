@@ -6,8 +6,7 @@
 
 .custom-radial-legend p.bold {
     font-weight: 700;
-    font-size: 30px;
-    margin-bottom: 15px;
+    font-size: 20px;
     color: black;
 }
 
@@ -16,8 +15,19 @@
 }
 
 .custom-radial-legend p {
-    margin: 8px 0;
-    font-size: 18px;
+    margin: 2px 0;
+    font-size: 15px;
     font-weight: 500;
     color: rgba(116, 121, 140, 1);
 }
+
+@media (min-width: 1400px) {
+    .custom-radial-legend p.bold {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .custom-radial-legend p {
+        margin: 8px 0;
+        font-size: 18px;
+    }
+  }
